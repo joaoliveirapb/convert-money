@@ -1,0 +1,139 @@
+:root {
+  --background-blue: #1B83E2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #E5E5E5;
+}
+
+.convert-money {
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  background-color: #F4F4F4;
+  border-radius: 10px;
+}
+
+/* HEADER */
+.header {
+  background-color: var(--background-blue);
+  padding: 20px 50px;
+  border-radius: 10px 10px 0 0;
+}
+
+.header__title {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  color: #F4F4F4;
+}
+
+/* MAIN */
+
+main {
+  margin: 23px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* CONVERT FORM */
+.convert-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.input__convert-from,
+.input__convert-to,
+.input__value {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* CONVERT FROM */
+.label-convert-from,
+.label-convert-to,
+.label-value {
+  font-size: 14px;
+  color: #777777;
+}
+
+#convert-from, #convert-to, #value {
+  border: none;
+  padding: 15px;
+  border: 1px solid #BBBBBB;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #555555;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  outline: none;
+  appearance: none;
+}
+
+.button-convert {
+  border: none;
+  background-color: var(--background-blue);
+  border-radius: 25px;
+  padding: 15px 0;
+  color: #F4F4F4;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: .4s;
+}
+
+.button-convert:hover {
+  background-color: #369bfa;
+}
+
+.button-convert:active {
+  opacity: 0.7;
+}
+
+/* RESULT */
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+  border: 2px solid var(--background-blue);
+  border-radius: 5px;
+}
+
+.result-item {
+  text-align: center;
+}
+
+.result-item__flag, .arrow__img {
+  margin: 0 auto;
+}
+
+.result-item__coin {
+  font-size: 14px;
+  color: #777777;
+}
+
+.result-item__value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--background-blue);
+}
