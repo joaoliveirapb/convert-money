@@ -3,10 +3,12 @@ const selectConvertFrom = document.querySelector('#convert-from');
 const selectConvertTo = document.querySelector('#convert-to');
 const valueToConvert = document.querySelector('#value');
 
-function convertCoin() {
-  const dollar = 5.21;
-  const euro = 5.49;
-  const bitcoin = 120404.01;
+async function convertCoin() {
+  const data = await fetch('https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL').then(res => res.json());
+
+  const dollar = data.USDBRL.high;
+  const euro = data.EURBRL.high;
+  const bitcoin = data.BTCBRL.high;
 
   if(valueToConvert.value === '') alert('Preencha o campo Valor para que seja feita a conversão das moedas!!!');
   if(valueToConvert.value === '' && selectConvertFrom.value === selectConvertTo.value) alert('Os campos de Converter não podem ser iguais');
